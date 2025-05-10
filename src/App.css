@@ -2,11 +2,11 @@
 
 :root {
   --def-transition-duration: 0.2s;
-  --loader-text-color: #342529;
+  --loader-text-color: #4f343a;
   --color-text: #ffffffc7;
   --color-accent: #e76a10;
-  --color-bg: rgb(79 52 58);
-  --color-menu-bg: #2d2123;
+  --color-bg: #44494f;
+  --color-menu-bg: #4f343a;
 }
 
 html {

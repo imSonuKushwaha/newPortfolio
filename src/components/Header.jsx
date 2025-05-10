@@ -35,13 +35,13 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/intro">Introduction</Link>
           </li>
           <li>
-            <Link to="/Tour">Tour Packages</Link>
+            <Link to="/Tour">Experiences</Link>
           </li>
           <li>
-            <Link to="/Travel">Travel Tips</Link>
+            <Link to="/Travel">Resume</Link>
           </li>
           <li>
             <Link to="/Contact">Contact Us</Link>
