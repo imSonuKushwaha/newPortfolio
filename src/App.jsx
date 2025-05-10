@@ -1,12 +1,12 @@
-import "./App.css";
+// src/App.jsx
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoute from "./appRoute.jsx";
 
 function App() {
   return (
-    <>
-      <div className="flex justify-center">
-        <h1 className="text-8xl text-amber-600">sonu</h1>
-      </div>
-    </>
+    <Router>
+      <AppRoute />
+    </Router>
   );
 }
 
