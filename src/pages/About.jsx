@@ -39,7 +39,7 @@ const About = () => {
 
   return (
     <>
-      <div className="w-full h-screen overflow-auto p-4 flex flex-col items-center gap-5 sm:gap-10 pb-36">
+      <div className="w-full h-[calc(100vh-40px)] overflow-auto p-4 flex flex-col items-center gap-5 sm:gap-10">
         {/* Introduction */}
         <div className="max-w-2xl">
           <div
@@ -136,13 +136,12 @@ const About = () => {
           ></div>
           {activeTab === true ? <Skill /> : <DSA />}
         </div>
+        <div className="flex items-center justify-center py-3">
+          {/* social media */}
+          <SocialMedia />
+        </div>
       </div>
       {/*  */}
-
-      <footer className="absolute bottom-0 w-full z-10 flex items-center justify-center py-3 bg-custom">
-        {/* social media */}
-        <SocialMedia />
-      </footer>
     </>
   );
 };
