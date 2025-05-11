@@ -47,6 +47,20 @@ const Experiences = () => {
   ];
 
   const [activeTab, setActiveTab] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [slideDirection, setSlideDirection] = useState("right");
+
+  const handleTabChange = (newIndex) => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      // Determine slide direction based on index change
+      setSlideDirection(newIndex > activeTab ? "left" : "right");
+      setTimeout(() => {
+        setActiveTab(newIndex);
+        setIsAnimating(false);
+      }, 500);
+    }
+  };
   // swipe actions
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -65,16 +79,13 @@ const Experiences = () => {
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      setActiveTab(
-        (activeTab + 1) % experienceData.length > 0 ? activeTab + 1 : 0
-      );
+      const newIndex = (activeTab + 1) % experienceData.length;
+      handleTabChange(newIndex);
     }
     if (isRightSwipe) {
-      setActiveTab(
-        (activeTab - 1) % experienceData.length < 0
-          ? experienceData.length - 1
-          : (activeTab - 1) % experienceData.length
-      );
+      const newIndex =
+        activeTab === 0 ? experienceData.length - 1 : activeTab - 1;
+      handleTabChange(newIndex);
     }
   };
 
@@ -89,7 +100,11 @@ const Experiences = () => {
           onTouchEnd={onTouchEnd}
         >
           <div
-            className={`flex flex-col justify-center items-start gap-3 border-8 border-gray-600 rounded-3xl p-6 mt-4 transition duration-500 ease-in-out shadow-gray-800 shadow-2xl`}
+            className={`flex flex-col justify-center items-start gap-3 border-8 border-gray-600 rounded-3xl p-6 mt-4 transition duration-500 ease-in-out shadow-gray-800 shadow-2xl ${
+              isAnimating
+                ? `slide-exit-${slideDirection}`
+                : `slide-enter-${slideDirection}`
+            }`}
           >
             <strong className="text-xl sm:text-2xl text-orange-200">
               {experienceData[activeTab].role},{" "}
@@ -100,12 +115,9 @@ const Experiences = () => {
               {experienceData[activeTab].duration}
             </span>
             <hr className="w-full border-dashed border-t-2 border-gray-700" />
-            <ul className="list-none list-inside text-white text-pretty">
+            <ul className="list-none list-inside text-white text-pretty space-y-2">
               {experienceData[activeTab].points.map((point, i) => (
-                <li key={i}>
-                  {point} <br />
-                  <br />{" "}
-                </li>
+                <li key={i}>{point}</li>
               ))}
             </ul>
           </div>
@@ -121,7 +133,7 @@ const Experiences = () => {
                     ? "bg-[#e76a10] w-9 h-3"
                     : "bg-gray-600 hover:bg-gray-700 w-3 h-3"
                 }`}
-              onClick={() => setActiveTab(index)}
+              onClick={() => handleTabChange(index)}
             ></button>
           ))}
         </div>

@@ -179,3 +179,64 @@ svg text.text-body {
     transform: translate3d(4px, 4px, 0);
   }
 }
+
+/* slide animation */
+@keyframes slideLeftOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeftIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideRightIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-exit-left {
+  animation: slideLeftOut 0.5s ease-in-out forwards;
+}
+
+.slide-enter-left {
+  animation: slideLeftIn 0.5s ease-in-out forwards;
+}
+
+.slide-exit-right {
+  animation: slideRightOut 0.5s ease-in-out forwards;
+}
+
+.slide-enter-right {
+  animation: slideRightIn 0.5s ease-in-out forwards;
+}
