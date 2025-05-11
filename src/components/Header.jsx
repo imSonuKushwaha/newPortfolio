@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   useEffect(() => {
     const rootElement = document.documentElement;
@@ -12,6 +13,18 @@ const Header = () => {
       rootElement.removeAttribute("menu-open");
     }
   }, [isMenuOpen]);
+
+  // Add new useEffect for handling route changes
+  useEffect(() => {
+    if (isMenuOpen) {
+      const timer = setTimeout(() => {
+        setIsMenuOpen(false);
+      }, 70);
+
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
+
   return (
     <div>
       <div className="relative z-[100] flex items-center justify-center text-center mt-2">
@@ -32,19 +45,55 @@ const Header = () => {
       <div id="menu-container">
         <ul className="unstyled">
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              style={{
+                color: location.pathname === "/" ? "#e76a10" : "inherit",
+              }}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/intro">Introduction</Link>
+            <Link
+              to="/intro"
+              style={{
+                color: location.pathname === "/intro" ? "#e76a10" : "inherit",
+              }}
+            >
+              Introduction
+            </Link>
           </li>
           <li>
-            <Link to="/Tour">Experiences</Link>
+            <Link
+              to="/experiences"
+              style={{
+                color:
+                  location.pathname === "/experiences" ? "#e76a10" : "inherit",
+              }}
+            >
+              Experiences
+            </Link>
           </li>
           <li>
-            <Link to="/Travel">Resume</Link>
+            <Link
+              to="/resume"
+              style={{
+                color: location.pathname === "/resume" ? "#e76a10" : "inherit",
+              }}
+            >
+              Resume
+            </Link>
           </li>
           <li>
-            <Link to="/Contact">Contact Us</Link>
+            <Link
+              to="/Contact"
+              style={{
+                color: location.pathname === "/Contact" ? "#e76a10" : "inherit",
+              }}
+            >
+              Contact Us
+            </Link>
           </li>
         </ul>
       </div>
