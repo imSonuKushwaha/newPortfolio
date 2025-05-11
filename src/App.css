@@ -187,14 +187,14 @@ svg text.text-body {
     opacity: 1;
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-80%);
     opacity: 0;
   }
 }
 
 @keyframes slideLeftIn {
   from {
-    transform: translateX(100%);
+    transform: translateX(80%);
     opacity: 0;
   }
   to {
@@ -209,14 +209,14 @@ svg text.text-body {
     opacity: 1;
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(80%);
     opacity: 0;
   }
 }
 
 @keyframes slideRightIn {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-80%);
     opacity: 0;
   }
   to {
@@ -226,17 +226,17 @@ svg text.text-body {
 }
 
 .slide-exit-left {
-  animation: slideLeftOut 0.5s ease-in-out forwards;
+  animation: slideLeftOut 0.3s ease-in-out forwards;
 }
 
 .slide-enter-left {
-  animation: slideLeftIn 0.5s ease-in-out forwards;
+  animation: slideLeftIn 0.3s ease-in-out forwards;
 }
 
 .slide-exit-right {
-  animation: slideRightOut 0.5s ease-in-out forwards;
+  animation: slideRightOut 0.3s ease-in-out forwards;
 }
 
 .slide-enter-right {
-  animation: slideRightIn 0.5s ease-in-out forwards;
+  animation: slideRightIn 0.3s ease-in-out forwards;
 }

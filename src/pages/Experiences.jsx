@@ -44,6 +44,16 @@ const Experiences = () => {
         "Ensured alignment with design guidelines to deliver a seamless user experience.",
       ],
     },
+    {
+      role: "Research Publication",
+      company: "IEEE Xplore",
+      location: "Online",
+      duration: "Sept 2023",
+      points: [
+        "Co-authored a research paper reviewing state-of-the-art deep learning methods for image synthesis, including GANs and Diffusion Models, highlighting their architectures, strengths, limitations, and real-world applications in generating high-quality, realistic images.",
+        "Explored evaluation techniques such as Inception Score (IS) and Frechet Inception Distance (FID) and discussed the need for human evaluation alongside quantitative metrics to more accurately assess model performance.",
+      ],
+    },
   ];
 
   const [activeTab, setActiveTab] = useState(0);
@@ -58,7 +68,7 @@ const Experiences = () => {
       setTimeout(() => {
         setActiveTab(newIndex);
         setIsAnimating(false);
-      }, 500);
+      }, 300);
     }
   };
   // swipe actions
@@ -91,16 +101,15 @@ const Experiences = () => {
 
   return (
     <>
-      <div className="w-full h-[calc(100vh-40px)] overflow-auto p-4 flex items-start justify-center">
-        {/* Experiences */}
+      <div className="w-full h-[calc(100vh-40px)] overflow-hidden p-4 flex items-start justify-center">
         <div
-          className="max-w-2xl"
+          className="relative w-full max-w-2xl"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
           <div
-            className={`flex flex-col justify-center items-start gap-3 border-8 border-gray-600 rounded-3xl p-6 mt-4 transition duration-500 ease-in-out shadow-gray-800 shadow-2xl ${
+            className={`w-full flex flex-col justify-center items-start gap-3 border-8 border-gray-600 rounded-3xl p-6 mt-4 transition-all duration-500 ease-in-out shadow-gray-800 shadow-2xl ${
               isAnimating
                 ? `slide-exit-${slideDirection}`
                 : `slide-enter-${slideDirection}`
@@ -124,6 +133,16 @@ const Experiences = () => {
         </div>
 
         <div className="absolute bottom-10 flex justify-center items-center gap-3">
+          <button
+            className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-l-full me-10 hidden sm:block"
+            onClick={() =>
+              handleTabChange(
+                activeTab === 0 ? experienceData.length - 1 : activeTab - 1
+              )
+            }
+          >
+            Prev
+          </button>
           {experienceData.map((_, index) => (
             <button
               key={index}
@@ -136,6 +155,14 @@ const Experiences = () => {
               onClick={() => handleTabChange(index)}
             ></button>
           ))}
+          <button
+            className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-r-full ms-10  hidden sm:block"
+            onClick={() =>
+              handleTabChange((activeTab + 1) % experienceData.length)
+            }
+          >
+            Next
+          </button>
         </div>
       </div>
     </>
