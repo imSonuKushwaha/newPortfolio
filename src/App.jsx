@@ -4,7 +4,7 @@ import AppRoute from "./appRoute.jsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/newPortfolio">
       <AppRoute />
     </Router>
   );
