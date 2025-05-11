@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const rootElement = document.documentElement;
@@ -13,17 +13,6 @@ const Header = () => {
       rootElement.removeAttribute("menu-open");
     }
   }, [isMenuOpen]);
-
-  // Add new useEffect for handling route changes
-  useEffect(() => {
-    if (isMenuOpen) {
-      const timer = setTimeout(() => {
-        setIsMenuOpen(false);
-      }, 70);
-
-      return () => clearTimeout(timer);
-    }
-  }, [location.pathname]);
 
   return (
     <div>
@@ -50,6 +39,7 @@ const Header = () => {
               style={{
                 color: location.pathname === "/" ? "#e76a10" : "inherit",
               }}
+              onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
@@ -60,6 +50,7 @@ const Header = () => {
               style={{
                 color: location.pathname === "/intro" ? "#e76a10" : "inherit",
               }}
+              onClick={() => setIsMenuOpen(false)}
             >
               Introduction
             </Link>
@@ -71,6 +62,7 @@ const Header = () => {
                 color:
                   location.pathname === "/experiences" ? "#e76a10" : "inherit",
               }}
+              onClick={() => setIsMenuOpen(false)}
             >
               Experiences
             </Link>
@@ -80,20 +72,10 @@ const Header = () => {
               href="https://drive.google.com/file/d/1ovQCRkkXZ8VExiv8pbCOcBryzEwInTPi/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
             >
               Resume
             </a>
-          </li>
-
-          <li>
-            <Link
-              to="/Contact"
-              style={{
-                color: location.pathname === "/Contact" ? "#e76a10" : "inherit",
-              }}
-            >
-              Contact Us
-            </Link>
           </li>
         </ul>
       </div>

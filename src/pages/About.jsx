@@ -39,13 +39,13 @@ const About = () => {
 
   return (
     <>
-      <div className="w-full h-[calc(100vh-80px)] overflow-auto p-4 flex flex-col items-center gap-5 sm:gap-10">
+      <div className="w-full h-[calc(100vh-40px)] overflow-auto p-4 flex flex-col items-center gap-5 sm:gap-10">
         {/* Introduction */}
         <div className="max-w-2xl">
           <div
             ref={introRef}
             className={`flex flex-col justify-center items-start gap-3 border-8 border-gray-600 rounded-3xl p-6 mt-2 transition duration-500 ease-in-out  shadow-gray-800 ${
-              introInView ? "-translate-y-2 shadow-lg shadow-gray-800" : ""
+              introInView ? "-translate-y-2 shadow-2xl shadow-gray-800" : ""
             }`}
           >
             <strong className="text-xl sm:text-2xl text-orange-200">
@@ -76,7 +76,7 @@ const About = () => {
           <div
             ref={academicsRef}
             className={`flex flex-col justify-center items-start gap-3 border-8 border-gray-600 rounded-3xl p-6 mt-2 transition duration-500 ease-in-out shadow-gray-800 ${
-              academicsInView ? "-translate-y-2 shadow-lg shadow-gray-800" : ""
+              academicsInView ? "-translate-y-2 shadow-2xl shadow-gray-800" : ""
             }`}
           >
             <strong className="text-blue-300 text-lg sm:text-xl">
@@ -101,7 +101,7 @@ const About = () => {
         <div
           ref={skillsRef}
           className={`max-w-2xl flex flex-col items-center border-8 border-gray-600 rounded-3xl p-6 ${
-            skillsInView ? "-translate-y-2 shadow-lg shadow-gray-800" : ""
+            skillsInView ? "-translate-y-2 shadow-2xl shadow-gray-800" : ""
           } transition duration-500 ease-in-out`}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
@@ -136,7 +136,7 @@ const About = () => {
           ></div>
           {activeTab === true ? <Skill /> : <DSA />}
         </div>
-        <div className="flex items-center justify-center py-3">
+        <div className="flex items-center justify-center py-3 mb-3">
           {/* social media */}
           <SocialMedia />
         </div>
