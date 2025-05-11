@@ -101,7 +101,7 @@ const Experiences = () => {
 
   return (
     <>
-      <div className="w-full h-[calc(100vh-40px)] overflow-hidden p-4 flex items-start justify-center">
+      <div className="w-full h-[calc(100dvh-40px)] overflow-hidden p-4 flex items-start justify-center">
         <div
           className="relative w-full max-w-2xl"
           onTouchStart={onTouchStart}
