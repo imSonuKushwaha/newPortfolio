@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DSA from "../components/DSA";
 import Skill from "../components/Skill";
 import SocialMedia from "../components/SocialMedia";
@@ -57,7 +57,7 @@ const About = () => {
 
   return (
     <>
-      <div className="w-full h-[calc(100vh-env(safe-area-inset-top))] overflow-auto p-4 flex flex-col items-center gap-5 sm:gap-10 pb-10">
+      <div className="w-full h-[calc(100vh-env(safe-area-inset-top))] overflow-auto p-4 flex flex-col items-center gap-5 sm:gap-10 pb-36">
         {/* Introduction */}
         <div className="max-w-2xl">
           <div
