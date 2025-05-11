@@ -76,15 +76,15 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/resume"
-              style={{
-                color: location.pathname === "/resume" ? "#e76a10" : "inherit",
-              }}
+            <a
+              href="https://drive.google.com/file/d/1ovQCRkkXZ8VExiv8pbCOcBryzEwInTPi/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Resume
-            </Link>
+            </a>
           </li>
+
           <li>
             <Link
               to="/Contact"

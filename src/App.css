@@ -7,7 +7,6 @@
   --color-accent: #e76a10;
   --color-bg: #44494f;
   --color-menu-bg: #4f343a;
-  --vh: 1vh;
 }
 
 html {
@@ -16,11 +15,6 @@ html {
   line-height: 1.5;
   background-color: var(--color-bg);
   color: var(--color-text);
-}
-
-/* Then you can use it in your existing styles */
-.h-screen {
-  height: calc(var(--vh, 1vh) * 100);
 }
 
 /* home background animmation */
