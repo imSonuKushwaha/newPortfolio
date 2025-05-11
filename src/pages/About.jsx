@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DSA from "../components/DSA";
 import Header from "../components/Header";
 import Skill from "../components/Skill";
@@ -38,9 +38,27 @@ const About = () => {
   const [academicsRef, academicsInView] = useInView();
   const [skillsRef, skillsInView] = useInView();
 
+  // Add useEffect to handle mobile viewport height
+  useEffect(() => {
+    const adjustHeight = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    // Initial calculation
+    adjustHeight();
+    // Recalculate on resize and orientation change
+    window.addEventListener("resize", adjustHeight);
+    window.addEventListener("orientationchange", adjustHeight);
+
+    return () => {
+      window.removeEventListener("resize", adjustHeight);
+      window.removeEventListener("orientationchange", adjustHeight);
+    };
+  }, []);
+
   return (
     <>
-      <div className="w-full h-screen overflow-auto p-4 flex flex-col items-center gap-5 sm:gap-10 pb-36">
+      <div className="w-full h-[calc(100vh-env(safe-area-inset-top))] overflow-auto p-4 flex flex-col items-center gap-5 sm:gap-10 pb-36">
         {/* Introduction */}
         <div className="max-w-2xl">
           <div
