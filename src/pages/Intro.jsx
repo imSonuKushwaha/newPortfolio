@@ -4,7 +4,7 @@ import Skill from "../components/Skill";
 import SocialMedia from "../components/SocialMedia";
 import { useInView } from "../components/UseInView";
 
-const About = () => {
+const Intro = () => {
   const [activeTab, setActiveTab] = useState(true);
   // swipe actions
   const [touchStart, setTouchStart] = useState(null);
@@ -58,16 +58,15 @@ const About = () => {
               and tech firms across India and Nepal.
               <br />
               <br />
-              My previous roles include working on hospital management software
-              and e-commerce solutions, where I built responsive UIs, integrated
-              RESTful APIs, and automated key workflows.
+              My previous roles include working on hospital management software,
+              CRM system and e-commerce solutions, where I built responsive UIs,
+              integrated RESTful APIs, and automated key workflows.
               <br />
               <br />
-              I'm a strong problem solver, actively contributing to high-impact
-              projects. Whether it’s collaborating with cross-functional teams,
-              refining user experience, or diving into new frameworks, I bring a
-              fast-learning mindset and a passion for building meaningful
-              software that performs.
+              I'm a strong problem solver with a passion for building
+              high-performance, user-focused software. I write clean, efficient
+              code and deliver reliable solutions that drive impactful,
+              real-time results.
             </p>
           </div>
         </div>
@@ -136,7 +135,7 @@ const About = () => {
           ></div>
           {activeTab === true ? <Skill /> : <DSA />}
         </div>
-        <div className="flex items-center justify-center py-3 mb-3">
+        <div className="flex items-center justify-center py-3 mb-5">
           {/* social media */}
           <SocialMedia />
         </div>
@@ -146,4 +145,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Intro;

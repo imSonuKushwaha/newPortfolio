@@ -68,7 +68,7 @@ const Experiences = () => {
       setTimeout(() => {
         setActiveTab(newIndex);
         setIsAnimating(false);
-      }, 300);
+      }, 500); // Duration of the animation 0.5s
     }
   };
   // swipe actions

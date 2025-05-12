@@ -226,7 +226,7 @@ svg text.text-body {
 }
 
 .slide-exit-left {
-  animation: slideLeftOut 0.3s ease-in-out forwards;
+  animation: slideLeftOut 0.5s ease-in-out forwards;
 }
 
 .slide-enter-left {
@@ -234,7 +234,7 @@ svg text.text-body {
 }
 
 .slide-exit-right {
-  animation: slideRightOut 0.3s ease-in-out forwards;
+  animation: slideRightOut 0.5s ease-in-out forwards;
 }
 
 .slide-enter-right {
