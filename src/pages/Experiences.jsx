@@ -40,7 +40,8 @@ const Experiences = () => {
       location: "Kathmandu, Nepal",
       duration: "June 2022 - August 2022",
       points: [
-        "Built an E-commerce Card Page with 5 reusable React components using ReactJS and Bootstrap, fully aligned with design guidelines to enhance the user experience, optimizing performance and responsiveness across devices.",
+        "Built an E-commerce Card Page with 5 reusable React components using ReactJS and Bootstrap, fully aligned with design guidelines to enhance user experience, optimizing performance and responsiveness across devices.",
+        "Gained hands-on experience with component-based architecture, improved problem-solving skills, and developed a deeper understanding of front-end performance optimization.",
       ],
     },
     {
