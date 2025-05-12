@@ -6,42 +6,41 @@ const Experiences = () => {
       role: "Frontend Developer",
       company: "KRM Ayurveda Pvt. Ltd.",
       location: "Delhi, India",
-      duration: "Dec 2024 - Present",
+      duration: "December 2024 - Present",
       points: [
-        "Leading the front-end development of a CRM for a medical sales corporation, improving interdepartmental coordination by 40%.",
-        "Developed scalable, component-based UI with ReactJS and Bootstrap, automating workflows and reducing manual tasks by 50%.",
-        "Integrated call management, sales logistics, order handling, and manual processes into one CRM, boosting workflow efficiency by 60%.",
+        "Leading front-end development of a CRM for a medical sales corporation, integrating profiles within departments and improving interdepartmental coordination by 40%.",
+        "Developed scalable UI with ReactJS and Bootstrap, translating cross-functional requirements into role-based dashboards with real-time data flow, automation, and tracking, reducing manual tasks by 50% and speeding task completion by 35%.",
+        "Integrated four software systems – call management, sales logistics, order management, and manual processes (Excel/Whatsapp/phone calls) into a unified CRM platform, boosting workflow efficiency by 60% and eliminating system switching.",
       ],
     },
     {
       role: "Frontend Developer",
       company: "Nagarik Solution Pvt. Ltd.",
       location: "Kathmandu, Nepal",
-      duration: "Apr 2024 - Aug 2024",
+      duration: "April 2024 - August 2024",
       points: [
-        "Co-designed a responsive UI, reducing task completion time by 25%.",
-        "Integrated 20+ RESTful APIs, improving data exchange and system response time.",
-        "Implemented real-time updates and collaborated with healthcare professionals to build a reliable UI aligned with NHMIS standards.",
+        "Co-designed a responsive UI, reducing task completion time by 25%, and integrated 20+ RESTful APIs to improve data exchange efficiency and response time.",
+        "Implemented real-time data updates as per NHMIS standards, boosting data accuracy by 70%, and resolved critical bugs to enhance system reliability.",
+        "Collaborated with healthcare professionals to gather requirements and deliver an intuitive, accessible UI for the Central Hospital System.",
       ],
     },
     {
       role: "Software Engineer",
       company: "Maroon Engineering Solution",
       location: "Pokhara, Nepal",
-      duration: "Jul 2023 - Mar 2024",
+      duration: "July 2023 - March 2024",
       points: [
-        "Built a responsive website with 17 features using ReactJS, NodeJS, Tailwind CSS, Material UI, and MongoDB.",
-        "Optimized responsiveness for mobile devices and developed a product-ready Flutter app named 'ePasal'.",
+        "Built a responsive website with 17 key features using ReactJS, Express with NodeJS, Tailwind CSS, Material UI, and MongoDB and optimized the responsiveness of web pages, especially to mobile screens to assist Mobile Web App.",
+        "Developed a product-ready mobile application, ePasal, using Flutter, ensuring cross-platform compatibility for both Android and iOS. The app features a dynamic and responsive UI, and integrates seamlessly with RESTful APIs.",
       ],
     },
     {
       role: "Front-End Web Developer Intern",
       company: "Khudra Corporation",
       location: "Kathmandu, Nepal",
-      duration: "Jun 2022 - Aug 2022",
+      duration: "June 2022 - August 2022",
       points: [
-        "Built an E-commerce Card Page with 5 reusable components using ReactJS and Bootstrap.",
-        "Ensured alignment with design guidelines to deliver a seamless user experience.",
+        "Built an E-commerce Card Page with 5 reusable React components using ReactJS and Bootstrap, fully aligned with design guidelines to enhance the user experience, optimizing performance and responsiveness across devices.",
       ],
     },
     {
@@ -120,8 +119,8 @@ const Experiences = () => {
               {experienceData[activeTab].company}
             </strong>
             <span className="text-sm text-blue-300">
-              {experienceData[activeTab].location} --{" "}
-              {experienceData[activeTab].duration}
+              {experienceData[activeTab].location} : [{" "}
+              {experienceData[activeTab].duration} ]
             </span>
             <hr className="w-full border-dashed border-t-2 border-gray-700" />
             <ul className="list-none list-inside text-white text-pretty space-y-2">
