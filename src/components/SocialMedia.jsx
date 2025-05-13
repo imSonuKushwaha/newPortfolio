@@ -21,7 +21,7 @@ const SocialMedia = () => {
     },
     {
       name: "Gmail",
-      url: "https://mail.google.com/mail/?view=cm&fs=1&to=sonukumarkushwaha267@gmail.com",
+      url: "https://mail.google.com/mail/?view=cm&fs=1&to=imxonu@gmail.com",
       bg: "bg-[url(./assets/gmail.svg)]",
     },
   ];

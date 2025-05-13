@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DSA from "../components/DSA";
 import Skill from "../components/Skill";
 import SocialMedia from "../components/SocialMedia";
 import { useInView } from "../components/UseInView";
 
 const Intro = () => {
-  const [activeTab, setActiveTab] = useState(true);
+  const [activeTab, setActiveTab] = useState(false);
   // swipe actions
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -36,6 +36,14 @@ const Intro = () => {
   const [introRef, introInView] = useInView();
   const [academicsRef, academicsInView] = useInView();
   const [skillsRef, skillsInView] = useInView();
+
+  useEffect(() => {
+    if (skillsInView) {
+      setActiveTab(true);
+    } else {
+      setActiveTab(false);
+    }
+  }, [skillsInView]);
 
   return (
     <>

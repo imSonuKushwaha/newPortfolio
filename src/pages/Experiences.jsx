@@ -45,9 +45,9 @@ const Experiences = () => {
       ],
     },
     {
-      role: "Research Publication",
-      company: "IEEE Xplore",
-      location: "Online",
+      role: "Image Synthesis Using GANs and Diffusion Models",
+      company: "",
+      location: "Research Publication, IEEE Xplore",
       duration: "Sept 2023",
       points: [
         "Co-authored a research paper reviewing state-of-the-art deep learning methods for image synthesis, including GANs and Diffusion Models, highlighting their architectures, strengths, limitations, and real-world applications in generating high-quality, realistic images.",
@@ -116,8 +116,9 @@ const Experiences = () => {
             }`}
           >
             <strong className="text-xl sm:text-2xl text-orange-200">
-              {experienceData[activeTab].role},{" "}
-              {experienceData[activeTab].company}
+              {experienceData[activeTab].role}
+              {experienceData[activeTab].company &&
+                `, ${experienceData[activeTab].company}`}
             </strong>
             <span className="text-sm text-blue-300">
               {experienceData[activeTab].location} : [{" "}
