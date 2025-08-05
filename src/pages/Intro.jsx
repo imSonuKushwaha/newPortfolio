@@ -61,20 +61,22 @@ const Intro = () => {
             </strong>
             <hr className="w-full border-dashed border-t-2 border-gray-700" />
             <p className="text-pretty text-white">
-              I'm a results-driven Software Developer with a B.Tech in Computer
-              Engineering, backed by hands-on experience at multiple startups
-              and tech firms across India and Nepal.
+              I’m a result-driven Software Developer with a B.Tech in Computer
+              Engineering, backed by hands-on experience across multiple
+              startups and tech companies in India and Nepal.
               <br />
               <br />
-              My previous roles include working on hospital management software,
-              CRM system and e-commerce solutions, where I built responsive UIs,
-              integrated RESTful APIs, and automated key workflows.
+              I've contributed to a range of impactful projects, including
+              hospital management systems, CRM platforms, and e-commerce
+              applications. In these roles, I focused on building responsive
+              user interfaces, integrating RESTful APIs, and automating complex
+              workflows for greater efficiency.
               <br />
               <br />
-              I'm a strong problem solver with a passion for building
-              high-performance, user-focused software. I write clean, efficient
-              code and deliver reliable solutions that drive impactful,
-              real-time results.
+              I’m passionate about solving real-world problems through clean,
+              scalable, and high-performance code. I thrive in fast-paced
+              environments and take pride in delivering reliable, user-centric
+              solutions that create measurable impact.
             </p>
           </div>
         </div>

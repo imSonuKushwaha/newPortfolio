@@ -8,9 +8,10 @@ const Experiences = () => {
       location: "Delhi, India",
       duration: "December 2024 - Present",
       points: [
-        "Leading front-end development of a CRM for a medical sales corporation, integrating profiles within departments and improving interdepartmental coordination by 40%.",
-        "Developed scalable UI with ReactJS and Bootstrap, translating cross-functional requirements into role-based dashboards with real-time data flow, automation, and tracking, reducing manual tasks by 50% and speeding task completion by 35%.",
-        "Integrated four software systems – call management, sales logistics, order management, and manual processes (Excel/Whatsapp/phone calls) into a unified CRM platform, boosting workflow efficiency by 60% and eliminating system switching.",
+        "Led the front-end development of a deployed CRM platform used by 400+ active users across 20+ departments, improving interdepartmental coordination by 40%.",
+        "Built a modular, scalable UI with ReactJS and Bootstrap, turning complex workflows into real-time, role-based dashboards—cutting manual tasks by 50% and boosting task speed by 35%.",
+        "Integrated four disconnected systems—call management, sales logistics, order processing, and manual tools (Excel, WhatsApp, phone logs)—into a unified platform, improving workflow efficiency by 60%.",
+        "Mentored a frontend intern, managing task distribution, code reviews, and ensuring quality delivery across the project lifecycle.",
       ],
     },
     {
@@ -19,9 +20,10 @@ const Experiences = () => {
       location: "Kathmandu, Nepal",
       duration: "April 2024 - August 2024",
       points: [
-        "Co-designed a responsive UI, reducing task completion time by 25%, and integrated 20+ RESTful APIs to improve data exchange efficiency and response time.",
-        "Implemented real-time data updates as per NHMIS standards, boosting data accuracy by 70%, and resolved critical bugs to enhance system reliability.",
-        "Collaborated with healthcare professionals to gather requirements and deliver an intuitive, accessible UI for the Central Hospital System.",
+        "Designed and implemented a responsive, accessible UI for the Central Hospital System using ReactJS and Tailwind CSS, improving overall usability for healthcare staff.",
+        "Integrated REST APIs with real-time data updates following NHMIS compliance, increasing data accuracy and significantly improving system performance and reliability.",
+        "Collaborated directly with doctors, nurses, and admin staff to gather user requirements and translate them into intuitive frontend components, resulting in higher user satisfaction and fewer support tickets.",
+        "Diagnosed and resolved critical production bugs and ensured consistent platform stability under real-time hospital operations.",
       ],
     },
     {
@@ -30,8 +32,9 @@ const Experiences = () => {
       location: "Pokhara, Nepal",
       duration: "July 2023 - March 2024",
       points: [
-        "Built a responsive website with 17 key features using ReactJS, Express with NodeJS, Tailwind CSS, Material UI, and MongoDB and optimized the responsiveness of web pages, especially to mobile screens to assist Mobile Web App.",
-        "Developed a product-ready mobile application, ePasal, using Flutter, ensuring cross-platform compatibility for both Android and iOS. The app features a dynamic and responsive UI, and integrates seamlessly with RESTful APIs.",
+        "Engineered a full-featured, responsive web application with 17+ core functionalities using ReactJS, NodeJS (Express), Tailwind CSS, Material UI, and MongoDB, enabling seamless navigation and optimized performance across devices.",
+        "Focused on mobile responsiveness and accessibility, ensuring a smooth experience on smartphones and tablets to support mobile web app users, leading to a 40% improvement in user retention on mobile devices.",
+        "Developed a product-ready mobile application, ePasal, using Flutter, designed for both Android and iOS with a dynamic UI, real-time API integration, and smooth navigation across screens and features.",
       ],
     },
     {
